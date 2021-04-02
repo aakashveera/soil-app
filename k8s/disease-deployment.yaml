@@ -5,7 +5,7 @@ metadata:
   name: disease-deployment
 
 spec:
-  replicas: 10
+  replicas: 1
   selector:
     matchLabels:
       component: disease
