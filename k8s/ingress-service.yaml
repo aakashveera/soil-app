@@ -15,7 +15,3 @@ spec:
             backend:
               serviceName: soil-cluster-ip-service
               servicePort: 5000
-          - path: /api/?(.*)
-            backend:
-              serviceName: disease-cluster-ip-service
-              servicePort: 5000
