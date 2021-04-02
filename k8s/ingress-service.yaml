@@ -11,11 +11,11 @@ spec:
   rules:
     - http:
         paths:
-          - path: /soil_predict/
+          - path: /soil_predict
             backend:
               serviceName: soil-cluster-ip-service
               servicePort: 5000
-          - path: /disease_predict/
+          - path: /disease_predict
             backend:
               serviceName: disease-cluster-ip-service
               servicePort: 5000
