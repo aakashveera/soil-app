@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: soil-deployment
+
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      component: soil
+  template:
+    metadata:
+      labels:
+        component: soil
+    spec:
+      containers:
+        - name: soil-app
+          image: aakashveera/soil-predictor
+          ports:
+            - containerPort: 5000

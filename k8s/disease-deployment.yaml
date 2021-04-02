@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: disease-deployment
+
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      component: disease
+
+  template:
+    metadata:
+      labels:
+        component: disease
+    spec:
+      containers:
+        - name: disease-app
+          image: aakashveera/disease-predictor
+          ports:
+            - containerPort: 5000

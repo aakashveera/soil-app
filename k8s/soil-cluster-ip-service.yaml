@@ -1,0 +1,14 @@
+apiVersion: v1
+
+kind: Service
+
+metadata:
+  name: soil-cluster-ip-service
+
+spec:
+  type: ClusterIP
+  selector:
+    component: soil
+  ports:
+    - port: 5000
+      targetPort: 5000
